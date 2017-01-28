@@ -13,6 +13,9 @@ services:
       - default
       - service-proxy
     restart: always
+    ports:
+      - 80:80
+      - 443:443
   letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
     container_name: nginx-letsencrypt-companion
