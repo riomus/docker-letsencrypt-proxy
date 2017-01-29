@@ -10,6 +10,11 @@ Create proxy network:
 
 Add to your each proxied service:
 ```yml
+environment:
+  VIRTUAL_HOST: host.domain
+  #VIRTUAL_PORT: <optional port of service>
+  LETSENCRYPT_HOST: host.doman
+  LETSENCRYPT_EMAIL: mail.for@cert.creation.com
 networks:
   - default
   - service-proxy
